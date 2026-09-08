@@ -175,35 +175,35 @@ const ProjectInfoComponent: FC<ProjectInfoProps> = ({ project }) => {
       {/*File*/}
       <div className="mt-12 flex flex-col gap-3">
         <h2 className="text-xl font-bold">Files and.....</h2>
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-1">
           <h4>Git: </h4>
           <Link
             href={project.githubURL || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary05 break-all underline"
+            className="text-primary05 break-all"
           >
             <p>{project?.githubURL || "N/A"}</p>
           </Link>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-1">
           <h4>Presentation: </h4>
           <Link
             href={project?.presentationURL || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary05 break-all underline"
+            className="text-primary05 break-all"
           >
             <p>{project?.presentationURL || "N/A"}</p>
           </Link>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-1">
           <h4>Document: </h4>
           <Link
             href={project?.documentURL || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary05 break-all underline"
+            className="text-primary05 break-all"
           >
             <p>{project?.documentURL || "N/A"}</p>
           </Link>
