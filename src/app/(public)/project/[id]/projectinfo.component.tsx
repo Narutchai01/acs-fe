@@ -204,9 +204,9 @@ const ProjectInfoComponent: FC<ProjectInfoProps> = ({ project }) => {
         </div>
         <div className="mt-2 flex flex-row item-center gap-2">
           <h4>Techstack: </h4>
-          {project.techStacks?.map((tech: string, i: number) => (
-            <span key={i} className="rounded-md bg-gray-800 px-3 py-1 text-sm font-semibold text-white">{tech}</span>
-          ))}
+          <span className="font-semibold">
+            {project.techStacks?.join(", ")}
+          </span>
         </div>
       </div>
       {/*Member*/}
