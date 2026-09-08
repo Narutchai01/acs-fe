@@ -179,6 +179,8 @@ const ProjectInfoComponent: FC<ProjectInfoProps> = ({ project }) => {
           <h4>Git: </h4>
           <Link
             href={project.githubURL || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-primary05 break-all underline"
           >
             <p>{project?.githubURL || "N/A"}</p>
@@ -188,6 +190,8 @@ const ProjectInfoComponent: FC<ProjectInfoProps> = ({ project }) => {
           <h4>Presentation: </h4>
           <Link
             href={project?.presentationURL || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-primary05 break-all underline"
           >
             <p>{project?.presentationURL || "N/A"}</p>
@@ -197,6 +201,8 @@ const ProjectInfoComponent: FC<ProjectInfoProps> = ({ project }) => {
           <h4>Document: </h4>
           <Link
             href={project?.documentURL || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-primary05 break-all underline"
           >
             <p>{project?.documentURL || "N/A"}</p>
