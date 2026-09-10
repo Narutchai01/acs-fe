@@ -33,7 +33,7 @@ const NewsInfoComponent = ({ newsInfo, recommendNews }: NewsInfoProps) => {
     .slice(0, 10)
     .map((img) => img.imageUrl);
 
-  const allImages = [newsInfo.highlightURL, ...additionalImageUrls];
+  const allImages = [newsInfo.thumbnailURL, ...additionalImageUrls].filter(Boolean) as string[];
 
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
