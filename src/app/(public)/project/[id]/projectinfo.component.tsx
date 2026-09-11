@@ -175,38 +175,44 @@ const ProjectInfoComponent: FC<ProjectInfoProps> = ({ project }) => {
       {/*File*/}
       <div className="mt-12 flex flex-col gap-3">
         <h2 className="text-xl font-bold">Files and.....</h2>
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-1">
           <h4>Git: </h4>
           <Link
             href={project.githubURL || "#"}
-            className="text-primary05 break-all underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary05 break-all"
           >
             <p>{project?.githubURL || "N/A"}</p>
           </Link>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-1">
           <h4>Presentation: </h4>
           <Link
             href={project?.presentationURL || "#"}
-            className="text-primary05 break-all underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary05 break-all"
           >
             <p>{project?.presentationURL || "N/A"}</p>
           </Link>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-1">
           <h4>Document: </h4>
           <Link
             href={project?.documentURL || "#"}
-            className="text-primary05 break-all underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary05 break-all"
           >
             <p>{project?.documentURL || "N/A"}</p>
           </Link>
         </div>
         <div className="mt-2 flex flex-row item-center gap-2">
           <h4>Techstack: </h4>
-          {project.techStacks?.map((tech: string, i: number) => (
-            <span key={i} className="rounded-md bg-gray-800 px-3 py-1 text-sm font-semibold text-white">{tech}</span>
-          ))}
+          <span className="font-semibold">
+            {project.techStacks?.join(", ")}
+          </span>
         </div>
       </div>
       {/*Member*/}
