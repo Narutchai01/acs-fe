@@ -7,7 +7,6 @@ import ImportExportIcon from "@mui/icons-material/ImportExport";
 import FilterListRoundedIcon from "@mui/icons-material/FilterListRounded";
 import type { IProject } from "@/core/domain/project";
 import { ProjectCard } from "@/components/ProjectCard";
-import EmptyState from "@/components/emptyState";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import TuneIcon from "@mui/icons-material/Tune";
